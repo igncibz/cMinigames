@@ -1,0 +1,14 @@
+name: cMinigames
+main: Main.Main
+version: 0.3
+commands:
+  lobby:
+    usage: /lobby
+    aliases: [spawn]
+  arena:
+    usage: /arena
+  event:
+    usage: /event
+    aliases: [e]
+  shop:
+    usage: /shop
