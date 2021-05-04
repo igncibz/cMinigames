@@ -1,12 +1,8 @@
-package Main;
+package cibz.cMinigames.Main;
 
-import cibz.cMinigames.Commands.ArenaCommand;
-import cibz.cMinigames.Commands.EventCommand;
-import cibz.cMinigames.Commands.LobbyCommand;
-import cibz.cMinigames.Commands.ShopCommand;
-import cibz.cMinigames.Listeners.ConnectListener;
-import cibz.cMinigames.Listeners.GUIs.ShopGUIListener;
-import cibz.cMinigames.Listeners.SpawnItemListener;
+import cibz.cMinigames.Commands.*;
+import cibz.cMinigames.Listeners.*;
+import cibz.cMinigames.Listeners.GUIs.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -32,26 +28,25 @@ public class Main extends JavaPlugin {
     FileConfiguration economyConfig = YamlConfiguration.loadConfiguration(economy);
 
     @Override
-    public void onDisable() {
-        saveConfig();
-        saveFile();
-    }
-
-    @Override
     public void onEnable() {
         plugin = this;
 
         getCommand("lobby").setExecutor(new LobbyCommand());
+        getCommand("setlobby").setExecutor(new LobbyCommand());
         getCommand("shop").setExecutor(new ShopCommand());
         getCommand("event").setExecutor(new EventCommand());
-
         getCommand("arena").setExecutor(new ArenaCommand());
 
         getServer().getPluginManager().registerEvents(new ConnectListener(), this);
         getServer().getPluginManager().registerEvents(new SpawnItemListener(), this);
-
         getServer().getPluginManager().registerEvents(new ShopGUIListener(), this);
+        getServer().getPluginManager().registerEvents(new EventGUIListener(), this);
+    }
 
+    @Override
+    public void onDisable() {
+        saveConfig();
+        saveFile();
     }
 
     public FileConfiguration getEconomyFile() {

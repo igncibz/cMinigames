@@ -1,7 +1,7 @@
 package cibz.cMinigames.Events;
 
-import Main.Main;
-import Main.Economy;
+import cibz.cMinigames.Main.Economy;
+import cibz.cMinigames.Main.Main;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.*;
@@ -21,8 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
-
-import java.awt.*;
 
 public class SumoEvent implements Listener {
 

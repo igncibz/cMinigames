@@ -1,6 +1,6 @@
 package cibz.cMinigames.Listeners.GUIs;
 
-import Main.Economy;
+import cibz.cMinigames.Main.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -38,7 +38,7 @@ public class ShopGUIListener implements Listener {
                     }
                 }
             }
-            if(e.getInventory().getTitle().equals("Hats")){
+            if(e.getInventory().getTitle().equals("§9Hats")){
                 if (e.getCurrentItem().getItemMeta() != null) {
                     if (e.getCurrentItem().getItemMeta().getDisplayName() != null) {
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§bCoins")) {
@@ -55,7 +55,7 @@ public class ShopGUIListener implements Listener {
                     }
                 }
             }
-            if(e.getInventory().getTitle().equals("Trails")){
+            if(e.getInventory().getTitle().equals("§9Trails")){
                 if (e.getCurrentItem().getItemMeta() != null) {
                     if (e.getCurrentItem().getItemMeta().getDisplayName() != null) {
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§bCoins")) {
@@ -80,19 +80,19 @@ public class ShopGUIListener implements Listener {
 
         ItemStack hat = new ItemStack(Material.DIAMOND_HELMET);
         ItemMeta hatmeta = hat.getItemMeta();
-        hatmeta.setDisplayName("§9Hats");
+        hatmeta.setDisplayName("§bHats");
         hat.setItemMeta(hatmeta);
 
         ItemStack trails = new ItemStack(Material.FIREWORK);
         ItemMeta trailsmeta = trails.getItemMeta();
-        trailsmeta.setDisplayName("§9Trails");
+        trailsmeta.setDisplayName("§bTrails");
         trails.setItemMeta(trailsmeta);
 
         ItemStack coin = new ItemStack(Material.GOLD_NUGGET);
         ItemMeta coinmeta = coin.getItemMeta();
-        coinmeta.setDisplayName("§9Coins");
+        coinmeta.setDisplayName("§bCoins");
         ArrayList<String> lore = new ArrayList<String>();
-        lore.add("§f" + Economy.getBalance(p) + "§acoins.");
+        lore.add("§6" + Economy.getBalance(p) + " §ecoins.");
         coinmeta.setLore(lore);
         coin.setItemMeta(coinmeta);
 
@@ -109,7 +109,7 @@ public class ShopGUIListener implements Listener {
         ItemMeta coinmeta = coin.getItemMeta();
         coinmeta.setDisplayName("§bCoins");
         ArrayList<String> lore = new ArrayList<String>();
-        lore.add("§f" + Economy.getBalance(p) + "§acoins.");
+        lore.add("§6" + Economy.getBalance(p) + " §ecoins.");
         coinmeta.setLore(lore);
         coin.setItemMeta(coinmeta);
 
@@ -139,7 +139,7 @@ public class ShopGUIListener implements Listener {
         ItemMeta coinmeta = coin.getItemMeta();
         coinmeta.setDisplayName("§bCoins");
         ArrayList<String> lore = new ArrayList<String>();
-        lore.add("§f" + Economy.getBalance(p) + "§acoins.");
+        lore.add("§6" + Economy.getBalance(p) + " §ecoins.");
         coinmeta.setLore(lore);
         coin.setItemMeta(coinmeta);
 

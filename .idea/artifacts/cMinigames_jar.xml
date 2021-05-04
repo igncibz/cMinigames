@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cMinigames:jar">
+    <output-path>$USER_HOME$/Downloads/Plugins/Server/plugins</output-path>
+    <root id="archive" name="cMinigames.jar">
+      <element id="module-output" name="cMinigames" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Plugins/18.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

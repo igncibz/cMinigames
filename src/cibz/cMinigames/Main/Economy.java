@@ -1,4 +1,4 @@
-package Main;
+package cibz.cMinigames.Main;
 
 import org.bukkit.entity.Player;
 

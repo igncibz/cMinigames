@@ -1,14 +1,14 @@
 package cibz.cMinigames.Commands;
 
-import Main.Main;
-import cibz.cMinigames.Events.SumoEvent;
-import cibz.cMinigames.Listeners.GUIs.EventGUIListener;
+import cibz.cMinigames.Main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
+import cibz.cMinigames.Listeners.GUIs.*;
+import cibz.cMinigames.Events.*;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -44,7 +44,7 @@ public class EventCommand implements CommandExecutor {
         }
         if(args.length == 2){
             if(args[0].equalsIgnoreCase("join")){
-                if(args[1].equalsIgnoreCase("sumo")){
+/*                if(args[1].equalsIgnoreCase("sumo")){
                     if(Main.inSpawn.contains(p.getName())){
                         if(SumoEvent.joinable){
                             SumoEvent.sendLobby(p);
@@ -54,7 +54,7 @@ public class EventCommand implements CommandExecutor {
                     } else {
                         p.sendMessage("§bPlease go to spawn first.");
                     }
-                }
+                }*/
             }
             if(args[0].equalsIgnoreCase("spectate")){
                 String event = args[1];

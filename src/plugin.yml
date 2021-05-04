@@ -1,5 +1,5 @@
 name: cMinigames
-main: Main.Main
+main: cibz.cMinigames.Main.Main
 version: 0.3
 commands:
   lobby:
@@ -12,3 +12,6 @@ commands:
     aliases: [e]
   shop:
     usage: /shop
+  setlobby:
+    usage: /setlobby
+    aliases: [setspawn]
